@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)file:///C:/Users/Rizwan%20computers/Desktop/WEB%20PROJECT/blood_bank/blood_bank/main.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ehsas Blood Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(mainn.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        header span {
+            font-size: 44px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a.donor {
+            border: 1px solid #fff;
+            background-color: #000;
+        }
+
+        nav ul li a.patient {
+            border: 1px solid #fff;
+            background-color: #000;
+        }
+
+        nav ul li a.doctor {
+            border: 1px solid #fff;
+            background-color: #000;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content h2 {
+            font-size: 38px;
+            color: #beb7b7;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content em {
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .content .buttons {
+            margin-top: 30px;
+        }
+
+        .content .buttons a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f23a3a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./b_files/cui.png" alt="CUI Logo">
+        <span>BloodHub Care Center</span>
+    </header>
+
+    <div class="content">
+        <h2>Welcome to BloodHub Care Center</h2>
+        <p>"The gift of blood is the gift of life."</p>
+        <p>BloodHub Care Center is a renowned blood bank that aims to provide safe and reliable blood donations to those
+            in
+            need. Our dedicated team of professionals ensures the highest standards of quality and care in blood
+            collection, storage, and distribution.</p>
+        <p>Whether you are a patient in need of blood, a donor willing to contribute, or a doctor seeking blood for your
+            patients, BloodHub Care Center is here to serve you. Please select one of the options below:</p>
+        <div class="buttons">
+            <a href="file:///C:/Users/Rizwan%20computers/Desktop/WEB%20PROJECT/blood_bank/blood_bank/patient.html" class="patient">Click Here for Patient Registration</a>
+            <a href="file:///C:/Users/Rizwan%20computers/Desktop/WEB%20PROJECT/blood_bank/blood_bank/donor.html" class="donor">Click Here for Donor Registration</a>
+            <a href="file:///C:/Users/Rizwan%20computers/Desktop/WEB%20PROJECT/blood_bank/blood_bank/doctor.html" class="doctor">Click Here for Doctor Registration</a>
+        </div>
+        <p>If you want to update your record, please contact the administrator.</p>
+        <p><strong>Admin Contact:</strong></p>
+        <p>Phone: +923431956659</p>
+        <p>Email: ayan661773@gmail.com</p>
+        <p><em>BY Muhammad AYAN</em></p>
+    </div>
+    <footer>
+        © 2024 BloodHub Care CenterEhsas Blood Bank. All rights reserved.
+    </footer>
+
+
+</body></html>

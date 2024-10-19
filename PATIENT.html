@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Registration Form</title>
+    <style>
+        body {
+            background-image: url("patient.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8B0000;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #8B0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #800000;
+        }
+
+        .quote {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        #patient_disease {
+            display: none;
+        }
+    </style>
+    <script>
+        function togglePatientDiseaseField() {
+            var patientTypeSelect = document.getElementById("patient_type");
+            var patientDiseaseField = document.getElementById("patient_disease");
+
+            if (patientTypeSelect.value === "thalassemia") {
+                patientDiseaseField.style.display = "none";
+                patientDiseaseField.removeAttribute("required");
+            } else {
+                patientDiseaseField.style.display = "block";
+                patientDiseaseField.setAttribute("required", true);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Patient Registration</h1>
+        <form action="patient.php" method="POST">
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="fn" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="ln" required>
+            </div>
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" id="date_of_birth" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="cnic">CNIC:</label>
+                <input type="text" id="cnic" name="cnic">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gen" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="blood_group">Blood Group:</label>
+                <select id="blood_group" name="bg" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="patient_type">Patient Type:</label>
+                <select id="patient_type" name="pt" onchange="togglePatientDiseaseField()" required>
+                    <option value="">Select Patient Type</option>
+                    <option value="thalassemia">Thalassemia</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="patient_disease">Patient Disease:</label>
+                <input type="text" id="patient_disease" name="pd">
+            </div>
+            <div class="form-group">
+                <label for="contact_number">Contact Number:</label>
+                <input type="tel" id="contact_number" name="cn" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="add" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="hospital_name">Hospital Name:</label>
+                <select id="hospital_name" name="hs" required>
+                    <option value="">Select Hospital Name</option>
+                    <option value="Benazir Bhutto Shaheed Teaching Hospital">Benazir Bhutto Shaheed Teaching Hospital
+                    </option>
+                    <option value="Combined Milltary Hospital(CMH)">Combined Military Hospital (CMH)</option>
+                    <option value="Ayub Medical Complex">Ayub Medical Complex</option>
+                    <option value="Emergency Department DHQ">Emergency Department DHQ</option>
+                    <option value="Women and Children Hospital">Women and Children Hospital</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select id="city" name="city" required>
+                    <option value="Abbottabad">Abbottabad</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit" name="submit">
+        </form>
+        <div class="quote">
+            <p>"A patient is not a medical case number, but a person."</p>
+        </div>
+    </div>
+</body>
+
+</html>
